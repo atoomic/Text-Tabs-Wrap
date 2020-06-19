@@ -23,14 +23,13 @@ WriteMakefile(
 
 	PM =>	($] > 5.010 ?
 		{
-			'lib.modern/Text/Tabs.pm'	=> '$(INST_LIBDIR)/Text/Tabs.pm',
-			'lib.modern/Text/Wrap.pm'	=> '$(INST_LIBDIR)/Text/Wrap.pm',
+			'lib.modern/Text/Tabs.pm'	=> '$(INST_LIB)/Text/Tabs.pm',
+			'lib.modern/Text/Wrap.pm'	=> '$(INST_LIB)/Text/Wrap.pm',
 		}
 		:
 		{
-			'lib.old/Text/Tabs.pm'	=> '$(INST_LIBDIR)/Text/Tabs.pm',
-			'lib.old/Text/Wrap.pm'	=> '$(INST_LIBDIR)/Text/Wrap.pm',
+			'lib.old/Text/Tabs.pm'	=> '$(INST_LIB)/Text/Tabs.pm',
+			'lib.old/Text/Wrap.pm'	=> '$(INST_LIB)/Text/Wrap.pm',
 		})
 
 	);
-
