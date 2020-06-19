@@ -71,7 +71,15 @@ sub table_ok {
     return $bad;
 }
 
-sub check($$$$) {
+BEGIN {
+	if ( "$]" >= 5.018 ) {
+		eval q[sub check :prototype($$$$) { goto \&_check }];
+	} else {
+		eval q[sub check ($$$$) { goto \&_check }];
+	}
+}
+
+sub _check {
     die "expected 4 arguments" unless @_ == 4;
     my ($found, $index, $version, $item) = @_;
     my $expected = $DATA[$index]{$version}{$item};

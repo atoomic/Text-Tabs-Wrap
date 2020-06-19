@@ -1,5 +1,8 @@
 #!/usr/bin/perl -I. -w
 
+use strict;
+use warnings;
+
 BEGIN {
 	if ($ENV{HARNESS_ACTIVE}) {
 		print "1..0 # Skipped: not a regression test\n";
@@ -63,8 +66,6 @@ BEGIN {
 #Dan
 #(perlmonks.org nick: t'mo)
 
-
-use strict;
 use Text::Wrap qw(wrap $columns);
 use Benchmark;
 

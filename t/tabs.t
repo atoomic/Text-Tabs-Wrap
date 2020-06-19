@@ -1,6 +1,9 @@
 #!/usr/old/bin/perl5.004_01 -w
 
-@tests = (split(/\nEND\n/s, <<DONE));
+use strict;
+use warnings;
+
+my @tests = (split(/\nEND\n/s, <<DONE));
 TEST 1 u
                 x
 END
@@ -91,9 +94,10 @@ print "1..$numtests\n";
 
 use Text::Tabs;
 
-$rerun = $ENV{'PERL_DL_NONLAZY'} ? 0 : 1;
+my $rerun = $ENV{'PERL_DL_NONLAZY'} ? 0 : 1;
 
-$tn = 1;
+my $tn = 1;
+my ($f, $fn);
 while (@tests) {
 	my $in = shift(@tests);
 	my $out = shift(@tests);

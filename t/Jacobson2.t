@@ -1,5 +1,8 @@
 #!/usr/bin/perl -I.
 
+use strict;
+use warnings;
+
 use Text::Wrap qw(wrap $columns $huge $break);
 
 print "1..1\n";

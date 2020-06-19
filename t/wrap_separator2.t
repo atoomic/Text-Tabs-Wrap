@@ -1,6 +1,9 @@
 #!/usr/local/bin/perl -w
 #Author: Dan Dascalescu
+
 use strict;
+use warnings;
+
 use Test::More tests => 1;
 
 use Text::Wrap;
